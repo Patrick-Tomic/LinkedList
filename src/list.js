@@ -27,7 +27,7 @@ import { node } from "./node.js";
             count++
             temp = temp.nextNode;
         }
-        return count;
+        return count+' is the size of the linked list';
     }
 
    
@@ -36,17 +36,17 @@ import { node } from "./node.js";
         while(temp.nextNode != null){
             temp = temp.nextNode;
         }
-        return temp;
+        return temp+' is the tail';
     }
     at(index){
         let count = 0;
-        temp = this.listHead;
+        let temp = this.listHead;
          for(let i = 0; i<index; i++){
             temp = temp.nextNode;
             if(temp ==null){ return 'No item for this index';}
          }
 
-        return temp;
+        return 'the node at '+index+' is '+temp;
     }
 
     pop(){
@@ -80,7 +80,7 @@ import { node } from "./node.js";
             temp = temp.nextNode; 
             count++;        
         }
-        return count;
+        return 'the index of the value is '+count;
 
     }
     toString(){
@@ -97,7 +97,7 @@ import { node } from "./node.js";
         return listString;
     }
     head(){
-        return this.listHead;
+        return 'the head is '+this.listHead.value;
     }
 
 }
